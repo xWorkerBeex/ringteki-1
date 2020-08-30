@@ -11,6 +11,9 @@
     "lint": "eslint server/ test/server/ client/ --ext=js --ext=jsx",
     "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.production.js"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ringteki/ringteki.git"
