@@ -9,7 +9,9 @@
     "karma": "cross-env karma start karma.config.js --single-run",
     "coverage": "cross-env JASMINE_CONFIG_PATH=./jasmine.json nyc jasmine && nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint server/ test/server/ client/ --ext=js --ext=jsx",
-    "build": "tsc && node build/server/gamenode"
+    "tsc": "tsc",
+    "build": "node build/server/gamenode",
+    "postinstall": "npm run tsc"
   },
   "engines": {
     "node": "12.x"
